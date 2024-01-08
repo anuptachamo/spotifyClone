@@ -1,0 +1,482 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;   /*all about scrolling*/
+}
+
+.main{
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+
+}
+
+/* ########################################     sidebar started    ############################################################# */
+.sidebar{
+    background-color: #000000;
+    width: 350px;
+    border-radius: 1rem;  /*16px*/
+    margin-right: 0.5rem;
+    
+}
+
+/* ########################################     sidebar/main-content started    ############################################################# */
+.main-content{
+    background-color: #121212;
+    flex: 1;  /*baki vako thau main-content laii deu vaneko*/
+    border-radius: 1rem;  /*16px*/
+    overflow: auto;  /*overflow auto halne bela scrollbar jaile show hunna jahile chaixa tyo bela show hunxa */
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ########################################     main/sidebar/nav started    ############################################################# */
+.nav{
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 1rem;
+}
+
+.nav-option{
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option:hover{
+    opacity: 1;
+}
+
+.nav-option i{
+    font-size: 1.25rem;
+}
+.nav-option a{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+/* ########################################     main/sidebar/nav ENDED    ############################################################# */
+
+
+/* ########################################     main/sidebar/library Started    ############################################################# */
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.75rem;
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+
+}
+
+.library-option img{
+    font-size: 1.1rem;
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons{
+    font-size: 1rem;
+    display: flex;
+}
+
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover{
+    opacity: 1;
+}
+
+.lib-box{
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.box{
+    height: 8rem;
+    background-color: #232323;
+    border-radius: 1rem;
+    margin: 0.5rem 0 1.25rem 0;
+    padding: 1rem 1.25rem;
+}
+
+.box-p1{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.box-p2{
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.5rem 0 0.5rem 0;
+
+}
+
+.badge{
+    font-size: 0.85rem;
+    color: #000000;
+    background-color: #fff;
+    border-radius: 1rem;
+    margin: 1rem 0 0.25rem 0;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.dark-badge{
+    background-color: #000000;
+    color: white;
+}
+
+.badge:hover{
+    transform: scale(1);
+}
+/* ########################################     library ended    ############################################################# */
+/* ########################################     sidebar ENDED    ############################################################# */
+
+
+
+/* ########################################     main/main-content/Sticky-nav started    ############################################################# */
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;
+}
+
+/* sticky-nav-icons start */
+.sticky-nav-icons{
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-icons img{
+    background-color: #000;
+    padding: 0.5rem;
+    border-radius: 50%;
+    opacity: 0.7;
+    margin-right: 0.5rem;
+}
+.sticky-nav-icons img:hover{
+    opacity: 1;
+
+}
+/* sticky-nav-icons end*/
+
+/* sticky-nav-options start */
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:-1rem;
+}
+
+/* nav-item start */
+.nav-item{
+    margin-right: 1rem;
+}
+
+.nav-item:hover{
+    transform: scale(1.05);
+}
+
+button .nav-item{
+    align-items: center;
+}
+/* nav-item end */
+
+/* notification icon start */
+.bellIcon{
+    font-size: 1.1rem;
+    background-color: #000;
+    padding: 0.5rem;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.bellIcon:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+/* notification icon end */
+
+/* user icon start */
+.userIcon{
+    font-size: 1.1rem;
+    background-color: #000;
+    padding: 0.5rem;
+    border-radius: 50%;
+    opacity: 0.7;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.userIcon:hover{
+    transform: scale(1.2);
+    opacity: 1;
+}
+/* user icon start */
+
+/* media */
+@media (max-width:1000px){
+    .hide{
+        display: none;
+    }
+}
+/* sticky-nav-options end */
+
+/* Recently Played section start */
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.cards-container{
+    display: flex;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+.card-img{
+    width: 100%;
+    background-size: cover;
+    border-radius: 0.5rem;
+}
+
+.card-title{
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.card-info{
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+/* Recently Played section end */
+
+/* line footer start */
+.footer{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+/* line footer end */
+
+/* ########################################    main/ music-player Start    ############################################################# */
+.music-player{
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+}
+
+/* music card start */
+.music-card{
+    display: flex;
+    width: 25%;
+}
+
+.music-img{
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Music details start */
+.music-title{
+    margin: 1rem 0 0 1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.music-title:hover{
+    text-decoration: underline;
+}
+
+.music-info{
+    position: relative;
+    opacity: 0.5;
+    margin: 0.25rem 0 0 1rem;
+    font-size: 0.75rem;
+}
+
+.music-info:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+/* Music details End */
+/* music card end */
+
+
+/* Heart icon start */
+.hearticon{
+    position: relative;
+    margin: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+}
+
+.hearticon:hover{
+    opacity: 1;
+}
+/* Heart icon end */
+
+/* ########################################     main/music-player/player start    ############################################################# */
+.player{
+    width: 50%;
+}
+
+/* player-controls start */
+.player-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.player-controls-icons{
+    height: 1rem;
+    margin-right: 2rem;
+    opacity: 0.7;
+}
+
+.player-controls-icons:hover{
+    opacity: 1;
+}
+/* player-controls end */
+
+/* playback-bar start */
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+/* progress bar start */
+.progress-bar{
+    width: 70%;
+    appearance: none;    /*default chrome ko style hataii dinxa*/
+    cursor: pointer;
+    background-color: transparent;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 0.75rem;
+    width: 0.75rem;
+    background-color: #04471ca5;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+/* progress bar end */
+
+/* playback-bar end */
+
+/* ########################################     main/music-player/controls start    ############################################################# */
+.controls{
+    width :25%;
+}
+
+/* right-controls start */
+.right-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-right: 2rem;
+
+}
+
+.right-controls-icons{
+    height: 1rem;
+    margin-left: 1.5rem;
+    opacity: 0.7;
+}
+
+.right-controls-last-icons{
+    height: 1rem;
+    margin-left: 0.01rem;
+    opacity: 0.7;
+}
+
+.right-controls-icons:hover, .right-controls-last-icons:hover{
+    opacity: 1;
+}
+/* right-controls end */
+
+/* controls-playback-bar start */
+.controls-playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* controls-progress-bar start */
+.controls-progress-bar{
+    width: 80%;
+    appearance: none;    /*default chrome ko style hataii dinxa*/
+    cursor: pointer;
+    background-color: transparent;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.controls-progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.controls-progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 0.75rem;
+    width: 0.75rem;
+    background-color: #04471ca5;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+/* controls-progress-bar end */
+
+/* controls-playback-bar end */
+/* ########################################     main/music-player/controls end    ############################################################# */
+
+
+/* ########################################     main/music-player end    ############################################################# */
+
